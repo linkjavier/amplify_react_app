@@ -1,0 +1,38 @@
+type Product @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  productName: String
+  productDescription: String
+  productPurchasePrice: String
+  productSellPrice: String
+  productQuantity: String
+  productBrand: String
+  productCategoryId: String
+  productIsDeleted: String
+}
+
+type SaleOrder @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  orderNumber: String
+  orderClientId: String
+  orderVehicleName: String
+  orderVehiclePlate: String
+  orderVehicleBrand: String
+  orderVehicleModel: String
+  orderVehicleType: String
+  orderDate: String
+  orderOperators: String
+  orderObservations: String
+  orderTotalValue: String
+  orderInvoiceId: String
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userDocumentType: String
+  userDocumentNumber: String
+  userName: String
+  userSurname: String
+  userContactPhone: String
+  userContactPhone2: String
+  userAddress: String
+}
